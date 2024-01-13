@@ -8,13 +8,14 @@ You can run `python manage.py runserver` (make sure to migrate before running th
 
 ## Instructions
 API urls:
- - api/ houses/
- - api/ houses/user/ [name='list-user-houses']
- - api/ houses/user/create/ [name='create-user-house']
- - api/ houses/user/<int:pk>/delete/ [name='delete-user-house']
- - api/ houses/user/<int:pk>/update/ [name='update-user-house']
- - api/ houses/city/<str:city>/ [name='list-city-houses']
+ - api/houses/ (All houses list, Login required)
+ - api/houses/user/ (All current user's house-list, Login required)
+ - api/houses/user/create/ (User creating a house)
+ - api/houses/user/<int:pk>/delete/ (User deleting one of his own houses)
+ - api/houses/user/<int:pk>/update/ (User updating one of his own houses)
+ - api/houses/city/<str:city>/ (All houses within the given city, also login required)
+   
 Auth urls:
- - auth/ ^jwt/create/? [name='jwt-create']
- - auth/ ^jwt/refresh/? [name='jwt-refresh']
- - auth/ ^jwt/verify/? [name='jwt-verify']
+ - auth/jwt/create/
+ - auth/jwt/refresh/
+ - auth/jwt/verify/
